@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-z)*lp^&_!ny2782=_lz_uma(x00=jv-4omgve@2&kmz@&)c#)u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['100.31.40.27']
 
 
 # Application definition
@@ -74,14 +75,18 @@ WSGI_APPLICATION = 'contact_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+import pymysql
+
+pymysql.install_as_MySQLdB()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoaws',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT':'',
+        'USER': 'admin',
+        'PASSWORD': 'Inacap2025',
+        'HOST': 'database-1.c7s6q8iwuw74.us-east-1.rds.amazonaws.com',
+        'PORT':'3306',
         'OPTIONS':{
             'charset': 'utf8mb4',
         },
