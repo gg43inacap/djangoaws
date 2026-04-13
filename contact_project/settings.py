@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'contact_project.wsgi.application'
 
 import pymysql
 
-pymysql.install_as_MySQLdB()
+pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {
